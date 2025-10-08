@@ -1,0 +1,24 @@
+Instalación
+1. Instalar composer
+php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+php -r "if (hash_file('sha384', 'composer-setup.php') === 'ed0feb545ba87161262f2d45a633e34f591ebb3381f2e0063c345ebea4d228dd0043083717770234ec00c5a9f9593792') { echo 'Instalador verificado'.PHP_EOL; } else { echo 'Instalador corrupto'.PHP_EOL; unlink('composer-setup.php'); salir(1); }"
+configuración del compositor php.php
+php -r "unlink('composer-setup.php');"
+
+composer -v // ver que sí se instaló
+
+2. Instalar Laravel
+composer global require laravel/installer // no es necesario si se va a utilizar composer create-project laravel/laravel Grupo1
+
+3. Crear proyecto laravel
+composer create-project laravel/laravel Grupo1
+
+4. Levantar servidor
+php artisan serve
+
+5. Crear modelo, migración y controlador (CRUD)
+php artisan make:model Estudiante -mcr
+
+6. Migrar
+php artisan migrate
+php artisan migrate:fresh //desde cero
